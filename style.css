@@ -164,11 +164,16 @@ strong {
     box-shadow: rgba(251, 255, 0, 0.7) 0 2px 4px,rgba(255, 252, 50, 0.5) 0 7px 13px -3px,rgba(228, 231, 64, 0.7) 0 -3px 0 inset;
 }
 
-.work-btn:focus {
+.services-btn {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.services-btn:focus {
     box-shadow: rgba(24, 245, 178, 0.7) 0 2px 4px,rgba(50, 207, 255, 0.3) 0 7px 13px -3px,rgba(64, 231, 217, 0.5) 0 -3px 0 inset;
 }
 
-.work-btn:hover {
+.services-btn:hover {
     box-shadow: rgba(24, 245, 178, 0.7) 0 2px 4px,rgba(50, 207, 255, 0.5) 0 7px 13px -3px,rgba(64, 231, 217, 0.7) 0 -3px 0 inset;
 }
 
@@ -231,7 +236,7 @@ h3 {
     display: block;
 }
 
-.section__title--artwork {
+.section__title--designs {
     color: var(--clr-accent);
 }
 
@@ -248,7 +253,7 @@ h3 {
     margin-bottom: 1em;
 }
 
-.section__subtitle--artwork {
+.section__subtitle--designs {
     color: var(--clr-light);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
@@ -538,6 +543,17 @@ header {
     margin: 0 auto;
 }
 
+.services__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
 @media(min-width: 800px) {
     .services {
         display: flex;
@@ -600,10 +616,11 @@ header {
     }
 }
 
-/* Portfolio Section */
+/* Design Section */
 
-.my-artwork {
+.my-designs {
     padding-top: 200px;
+    padding-bottom: 200px;
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;    
@@ -713,9 +730,9 @@ header {
     transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
 
-/* My Sites */
+/* Dev Section */
 
-.my-sites {
+.my-dev {
     padding-top: 200px;
     background-color: var(--clr-light);
     color: var(--clr-dark);
