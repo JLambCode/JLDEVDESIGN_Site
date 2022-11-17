@@ -4,6 +4,9 @@
 <!--Navigation-->
 <?php include "navigation.php"; ?>
 
+<!-- Email Modal -->
+<?php include "email_modal.php"; ?>
+
 <!--Intro-->
 <?php include "intro.php"; ?>
 

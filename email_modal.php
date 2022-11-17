@@ -1,42 +1,23 @@
-<div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal" id="email-modal">
         <div class="modal-content">
-            <div class="modal-header text-center">
-                <h5 class="modal-title">Contact Me</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body mx-3">
-                <div class="md-form mb-5">
-                    <i class="fas fa-user prefix grey-text"></i>
-                    <input type="text" id="form34" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form34">Your name</label>
-                </div>
-
-                <div class="md-form mb-5">
-                    <i class="fas fa-envelope prefix grey-text"></i>
-                    <input type="email" id="form29" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form29">Your email</label>
-                </div>
-
-                <div class="md-form mb-5">
-                    <i class="fas fa-tag prefix grey-text"></i>
-                    <input type="text" id="form32" class="form-control validate">
-                    <label data-error="wrong" data-success="right" for="form32">Subject</label>
-                </div>
-
-                <div class="md-form">
-                    <i class="fas fa-pencil prefix grey-text"></i>
-                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
-                    <label data-error="wrong" data-success="right" for="form8">Your message</label>
-                </div>
-
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+            <span class="modal-close-btn">&times;</span>
+            <div class="modal-content-right">
+                <form action="/" method="GET" class="modal-form" id="form">
+                    <h1>Tell me how I can help you!</h1>
+                    <div class="form-validation">
+                        <input type="text" class="modal-input" id="name" name="name" placeholder="Enter your name">
+                        <p>Error Message</p>
+                    </div>
+                    <div class="form-validation">
+                        <input type="email" class="modal-input" id="email" name="email" placeholder="Enter your email">
+                        <p>Error Message</p>
+                    </div>
+                    <div class="form-validation">
+                        <textarea class="modal-input" id="email-body" name="email body" rows="4" cols="50"></textarea>
+                        <p>Error Message</p>
+                    </div>
+                    <input type="submit" class="modal-input-btn" value="Send">
+                </form>
             </div>
         </div>
     </div>
-</div>
