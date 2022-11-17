@@ -1,5 +1,5 @@
 <section class="my-designs section" id="designs">
-    <h2 class="section__title section__title--designs">My Designs</h2>
+    <h2 class="section__title section__title--designs">Art</h2>
     <p class="section__title section__subtitle--designs">Click on each panel to view</p>
 
     <div class="options">

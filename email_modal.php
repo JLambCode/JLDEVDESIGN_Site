@@ -1,33 +1,42 @@
-<div id="modalDialog" class="modal">
-    <div class="modal-content animate-top">
-        <div class="modal-header">
-            <h5 class="modal-title">Contact Me</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">X</span>
-            </button>
+<div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title">Contact Me</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                    <i class="fas fa-user prefix grey-text"></i>
+                    <input type="text" id="form34" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="form34">Your name</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="email" id="form29" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="form29">Your email</label>
+                </div>
+
+                <div class="md-form mb-5">
+                    <i class="fas fa-tag prefix grey-text"></i>
+                    <input type="text" id="form32" class="form-control validate">
+                    <label data-error="wrong" data-success="right" for="form32">Subject</label>
+                </div>
+
+                <div class="md-form">
+                    <i class="fas fa-pencil prefix grey-text"></i>
+                    <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                    <label data-error="wrong" data-success="right" for="form8">Your message</label>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+            </div>
         </div>
-        <form method="post" id="contactForm">
-            <div class="modal-body">
-                <div class="response"></div>
-                <div class="form-group">
-                    <label>Name:</label>
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name"
-                        required="">
-                </div>
-                <div class="form-group">
-                    <label>Email:</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email"
-                        required="">
-                </div>
-                <div class="form-group">
-                    <label>Message:</label>
-                    <textarea name="message" id="message" class="form-control" placeholder="Your message here"
-                        rows="6"></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
     </div>
 </div>
