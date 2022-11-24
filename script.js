@@ -4,56 +4,37 @@ const navToggle = document.getElementById('menu-open');
 const modal = document.getElementById('email-modal');
 const openBtn = document.querySelector('.contact-btn');
 const closeBtn = document.querySelector('.modal-close-btn');
-const form = document.getElementById('form');
-const name = document.getElementById('name');
-const email = document.getElementById('email');
-const emailBody = document.getElementById('email-body');
+const form = document.getElementById('contact-form');
 
-function showError(input, message) {
-    const formValidation = input.parentElement;
-    formValidation.className = 'form-validation error';
-
-    const errorMessage = formValidation.querySelector('p');
-    errorMessage.innerText = message;
-}
-
-function showValid(input) {
-    const formValidation = input.parentElement;
-    formValidation.className = 'form-validation valid';
-}
-
-function checkRequired(inputArray) {
-    inputArray.forEach((input) => {
-        if (input.value.trim() === '') {
-            showError(input, `${getFieldName(input)} is required`);
-        } else {
-            showValid(input);
-        }
-    })
-}
-
-function checkLength(input, min, max) {
-    if (input.value.length < min) {
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    } else if (input.value.length > max) {
-        showError(input, `${getFieldName(input)} must be less than ${max} characters`)
-    } else {
-        showValid(input);
+const constraints = {
+    name: {
+        presence: { allowEmpty: false }
+    },
+    email: {
+        presence: { allowEmpty: false },
+        email: true
+    },
+    message: {
+        presence: { allowEmpty: false }
     }
-}
+};
 
-function getFieldName(input) {
-    return input.name.charAt(0).toUpperCase() + input.name.slice(1);
-}
+form.addEventListener('submit', (event) => {
+    const formValues = {
+        name: form.elements.name.value,
+        email: form.elements.message.value,
+        message: form.elements.message.value
+    };
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+    const errors = validate(formValues, constraints);
 
-    checkRequired([name, email, emailBody]);
-    checkLength(name, 3, 30);
-    checkLength(email, 1, 30);
-    checkLength(emailBody, 1, 500);
-})
+    if (errors) {
+        event.preventDefault();
+        const errorMessage = Object.values(errors).map((fieldValues) => { return fieldValues.join(',') }).join("\n");
+
+        alert(errorMessage);
+    }
+}, false);
 
 openBtn.addEventListener('click', () => {
     modal.style.display = 'block';

@@ -1,5 +1,5 @@
 <?php include "db.php"; ?>
-<?php include "header.php"; ?>
+<?php include "head.php"; ?>
 
 <!--Navigation-->
 <?php include "navigation.php"; ?>
